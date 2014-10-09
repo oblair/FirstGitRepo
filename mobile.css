@@ -1,7 +1,10 @@
 /* Utility */
 
+.clear{
+	clear:both;
+}
 
-/*         */
+/* Main */
 
 body{
   margin:0;
@@ -11,7 +14,6 @@ body{
 h1, h2{
     margin:0;
 }
-
 
 .container{
     width:100%;
