@@ -1,0 +1,28 @@
+/* Utility */
+
+
+/*         */
+
+body{
+  margin:0;
+  font-family: arial, sans-serif;
+}
+
+h1, h2{
+    margin:0;
+}
+
+
+.container{
+    width:100%;
+    background-color: #f3f3f3;
+    padding:0;
+}
+
+p{
+  font-size:14px;
+}
+
+img{
+  width:100%;
+}
