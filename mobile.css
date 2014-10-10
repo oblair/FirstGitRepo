@@ -10,21 +10,14 @@ body{
   margin:0;
   font-family: arial, sans-serif;
 }
-
-h1, h2{
-    margin:0;
-}
-
 .container{
-    width:100%;
-    background-color: #f3f3f3;
-    padding:0;
+	background-color:#0192d3;user-select:none;
 }
-
-p{
-  font-size:14px;
-}
-
-img{
-  width:100%;
+h1{
+	margin:0;
+	font-size:10em;
+	text-align:center;
+	pointer-events:none;
+	user-select:none;
+	-webkit-user-select:none;
 }
