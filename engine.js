@@ -1,6 +1,7 @@
 var width, height, next_timer;
 var game = {
     score:0,
+    danger_card:false,
     increaseScore:function(value){
         console.log('Score: ' + this.score + ' + ' + value + ' = ' + this.score + value);
         this.score += value;
@@ -22,39 +23,38 @@ $(document).ready(function(){
 });
 
 function clickCheck(){
-    next();
-}
-
-
-
-function next(success){
-
-    window.clearTimeout(next_timer);
-    console.log('change');
-    var random_num = Math.ceil(Math.random()*255);
-    console.log(random_num);
-    $('.container').css({'background-color': 'hsla('+random_num+',50%,50%,1)'});
-    next_timer = setTimeout(timeout,2000,1);
-
-    if(random_num < 15 || random_num > 345){
+    if(game.danger_card){
         game.resetScore();
+        //makeCard();
     }else{
         game.increaseScore(1);
+        makeCard();
     }
+}
 
-
+function makeCard(){
+    window.clearTimeout(next_timer);
+    var random_num = Math.ceil(Math.random()*255);
+    console.log('New card: ' + random_num);
+    if(random_num < 15 || random_num > 345){
+        game.danger_card = true;
+    }else{
+        game.danger_card = false;
+    }
+    $('.container').css({'background-color': 'hsla('+random_num+',50%,50%,1)'});
+    next_timer = setTimeout(timeout,2000,1);
 }
 
 function timeout(){
     console.log('tick');
-    next();
+    makeCard();
 }
-
 
 function init(){
     size();
     $(window).resize(size);
 }
+
 function size(){
     width = $(window).width();
     height = $(window).height();
