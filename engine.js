@@ -5,7 +5,7 @@ var game = {
     increaseScore:function(value){
         console.log('Score: ' + this.score + ' + ' + value + ' = ' + this.score + value);
         this.score += value;
-        $('.container h1').html(this.score);
+        $('.container h1').html(this.score).css({'font-size':((this.score/10)+1)+'em'});
     },
     resetScore:function(){
         console.log('Resetting score.');
