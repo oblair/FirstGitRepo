@@ -11,13 +11,25 @@ body{
   font-family: arial, sans-serif;
 }
 .container{
-	background-color:#0192d3;user-select:none;
+	background-color:#0192d3;
+	user-select:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
 }
-h1{
+.container h1{
+	position: absolute;
+	width:100%;
+	color:#000000;
 	margin:0;
 	font-size:1em;
 	text-align:center;
 	pointer-events:none;
 	user-select:none;
 	-webkit-user-select:none;
+	-moz-user-select:none;
+}
+
+.container section{
+	height:50%;
+	background-color:red;
 }
