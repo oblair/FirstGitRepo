@@ -75,7 +75,8 @@ function makeCard(){
             duration:colour_dist*50,
             progress:function(animation,progress,remainingMs){
                 //console.log(colour_dist);
-                // console.log(remainingMs);
+                //console.log(remainingMs);
+
             }
         });
     next_timer = setTimeout(timeout,2000,1);
